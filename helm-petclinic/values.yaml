@@ -1,4 +1,4 @@
-# Default values for helmPetClinic.
+# Default values for helm-petclinic.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -16,7 +16,7 @@ fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
-  create: true
+  create: false
   # Annotations to add to the service account
   annotations: {}
   # The name of the service account to use.
@@ -26,22 +26,20 @@ serviceAccount:
 podAnnotations: {}
 
 podSecurityContext: {}
-fsGroup: 2000
+  # fsGroup: 2000
 
 securityContext: {}
-capabilities:
-  drop:
-  - ALL
-  readOnlyRootFilesystem: true
-  runAsNonRoot: true
-  runAsUser: 1000
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
 
 service:
-  type: NodePort
-  nodePort: 30080
+  type: ClusterIP
   port: 80
   targetPort: 8080
-  protocol: TCP
 
 ingress:
   enabled: false
@@ -83,4 +81,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-

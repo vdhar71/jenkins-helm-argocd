@@ -1,10 +1,27 @@
+# Argocd Helm integration with Java springboot petclinic
+![alt text](https://github.com/vdhar71/jenkins-helm-argocd/blob/main/argocd-helm.png)
+
 # Spring PetClinic Sample Application [![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/spring-projects/spring-petclinic) [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=7517918)
 
+Jenkins helm argocd project corresponding to GitHub repository:
+https://github.com/vdhar71/jenkins-helm-argocd.git 
+This is a Java springboot petclinic application built using Gradle in a Jenkins pipeline
+and deployed to a Kubernetes cluster by Argocd using Helm charts.
+This project follows GitOps principles of:
+Principle #1: GitOps Is Declarative
+Principle #2: GitOps Apps Are Versioned and Immutable
+Principle #3: GitOps Apps Are Pulled Automatically
+Principal #4: GitOps Apps Are Continuously Reconciled
 
+# How to run the application
+Obtain the service port and use port-forward to known port, example:
+*kubectl -n helm-petclinic get svc* 
 
+*kubectl -n helm-petclinic port-forward svc/argocd-helm-petclinic-helm-petclinic 30081:8080*
 
+From a browser: http://localhost:30081
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
 
