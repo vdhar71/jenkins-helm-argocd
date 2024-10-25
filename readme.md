@@ -1,4 +1,4 @@
-# Argocd Helm integration with Java springboot petclinic
+# Argocd Helm integration with Java springboot petclinic application
 ![alt text](https://github.com/vdhar71/jenkins-helm-argocd/blob/main/argocd-helm.png)
 
 # Spring PetClinic Sample Application [![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml)
